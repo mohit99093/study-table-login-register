@@ -8,7 +8,7 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { Link  as li }  from "react-router-dom"
-import {useSelector,useDispatch} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import * as actions from '../../store/actions/actions'
 
 
@@ -114,7 +114,7 @@ export default function SignInSide(props) {
     
        setstate({...state,realotp:res.otp})
        console.log(res)
-       setStatus(res)
+       setStatus(res) 
        setTimeout(() => {
         props.history.push("/Signin")
        }, 2000); 
@@ -122,7 +122,6 @@ export default function SignInSide(props) {
 
 
    }
-   const token = useSelector(state=>state.idToken)
 
    const forgot = (
     <form  className="form"  onSubmit={handle_sendotp}>           

@@ -11,7 +11,7 @@ import { Link  as li }  from "react-router-dom"
 import {useDispatch} from 'react-redux'
 import * as actions from '../../store/actions/actions'
 
-// Mohit solankigit
+
 import "./SignIn.scss"
 function Copyright() {
   return (

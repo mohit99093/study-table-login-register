@@ -1,0 +1,99 @@
+.fut{
+    width: 100%;
+    background: rgba(1,1,1,0.2) !important;
+    .containers{
+        width: 65%;
+        margin: 0 auto;
+        padding: 45px 0;
+        @media(max-width:600px){
+            width: 90%;
+        }
+        .head{
+            font-size: 50px;
+            padding: 0 15px;
+            text-align: center;
+            font-weight: bold;
+            a{
+                color: black;
+                text-decoration: none;
+            }
+            a:hover{
+                color: rgb(43, 171, 167);
+                cursor: pointer;
+            }
+            @media(max-width:600px){
+                font-size: 30px;
+            }
+            span{
+                font-size: 40px;
+                @media(max-width:600px){
+                    font-size: 20px;
+                }
+            }
+        }
+        
+        .middlegap{
+            height: 30px;
+        }
+    }
+}
+
+
+.contact{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    @media(max-width:600px){
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .address{
+        div{
+            line-height: 1.5;
+            margin: 1em 0;
+            a{
+                text-decoration: none;
+                color: rgb(43, 171, 167);
+                font-weight: bold;
+                font-size: 22px;
+            }
+        }
+    }
+    .social{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 6em;
+        @media(max-width:600px){
+            flex-direction: column;
+            margin-top: 0em !important;
+        }
+        span{
+            margin-left: 2em;
+            @media(max-width:600px){
+                margin-top: 1em;
+            }
+        }
+    }
+}
+.new{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .newsletter{
+        .join{
+            margin: 1em 0;
+            color: black;
+        }
+        .inp{
+            ._btns{
+                color: rgb(43, 171, 167) !important;
+                @media(max-width:600px){
+                    margin-bottom: 1em !important;
+                }
+            }
+        }
+    }
+}

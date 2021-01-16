@@ -1,0 +1,151 @@
+.root-1 {
+    height: 100vh;
+    color: white;
+
+    
+      background:url("https://web-assets.cred.club/_next/assets/images/home-page/hero-bg.png") no-repeat center center /cover;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .MuiGrid-item{
+        margin-top: -20px;
+      }
+      background-size: cover;
+      background-position: 'center';
+    
+    .paper {
+      margin: 50px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  .heads{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    // @media(max-width: 600px){
+    //     width: auto;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+    .reward{
+        font-size: 6rem;
+        line-height: 100px;
+        letter-spacing: -3px;
+        text-align: center;
+        white-space: pre-line;
+        margin-top: 1em;
+        font-family: sans-serif;
+        width: 100%;
+        span{
+            font-size: 11rem;
+        }
+        @media(max-width: 600px){
+            font-size: 3rem;
+            letter-spacing: 0;
+            line-height: normal;
+            
+            span{
+                font-size: 4.5rem;
+            }
+        }
+    }
+    .sub{
+        font-size: 20px;
+        letter-spacing: -0.2px;
+        line-height: 38px;
+        margin: 2.5em 0;
+        letter-spacing: 2rem;
+        text-transform: uppercase;
+        @media(max-width: 600px){
+            font-size: 15px;
+            line-height: 1.5;
+            text-align: left;
+            margin: 1em 0;
+            letter-spacing: 0.9rem;
+        }
+    }
+    
+  }
+  .MuiFormLabel-root.Mui-focused{
+    color: white !important;
+  }
+
+  .MuiInput-underline:before{
+    border-bottom:  2px solid #d0cdc8 !important;
+  }
+  .MuiInput-underline:after{
+    border-bottom: 2px solid #d0cdc8 !important;
+  }
+  
+   
+    .form {
+      width: 100%; // Fix IE 11 issue.
+     
+    }
+    .form-field {
+      font-weight: bold !important;
+     
+      }
+    .submit {
+     
+      margin: 2px;
+    }
+   
+    .white{
+      color: white !important;
+      text-decoration: none;
+    }
+  
+    .forgot{
+          margin-top: 10px;
+          color: white !important;
+          .Link{
+              opacity: 0.8;
+              font-size: 15px;
+              line-height: 36px;
+              white-space: nowrap;
+              text-decoration: none !important;
+          }
+          @media(max-width: 600px){
+            .Link{
+              font-size: 12px;
+            }
+            
+        }
+    }
+    
+  .MuiFormLabel-root{
+    color: white !important;
+  } 
+  input{
+    color: #d0cdc8 !important;
+  }
+  .login-button-div{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 15px;
+      button {
+        background-color: green !important;
+      }
+  }
+  
+  .status{
+    margin: 3em 0;
+    text-align: center;
+    font-weight: bold;
+    .green{
+        color: #2baba7;
+    }
+    .red{
+        color: red;
+    }
+  }
+  }

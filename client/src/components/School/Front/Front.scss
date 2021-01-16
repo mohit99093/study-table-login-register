@@ -1,0 +1,95 @@
+.front{
+    background: #feebd9;
+    min-height: 600px;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    @media(max-width:600px){
+        padding: 0 3%;
+        width: 94%;
+    }
+    .contain{
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        flex-direction: column;
+        @media(max-width:600px){
+            width: 95%;
+        }
+        h1{
+            color: black;
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            @media(max-width:600px){
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+            span{
+                font-size: 75px;
+            }
+        }
+        .subs{
+            margin-top: -10px;
+            line-height: 1.5;
+            font-size: 20px;
+            @media(max-width:600px){
+                font-size: 16px;
+                margin-top: 0;
+            }
+        }
+        .sub1{
+            margin-top: 20px;
+            font-size: 15px;
+            @media(max-width:600px){
+                font-size: 15px;
+            }
+        }
+    }
+}
+.down{
+    position: absolute;
+    bottom: 60px;
+    display: block;
+    cursor: pointer;
+    left: 50%;
+}
+
+.down::before{
+    z-index: 1;
+    border-top: 25px solid #000;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    position: absolute;
+    bottom: -27px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.down::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #feebd9;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.btn12{
+   background-color: #2baba7 !important;
+   margin-left: 2em !important;
+   color: white !important;
+   font-size: 16px;
+   border-radius: 22px !important;
+   padding: 0.5em 1em !important;
+}

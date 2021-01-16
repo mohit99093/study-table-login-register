@@ -1,0 +1,19 @@
+.sec1{
+    width: 100%;
+    margin-top: 80px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    h1{
+        width: 75%;
+        color: white;
+        font-size: 65px;
+        margin: 15px auto !important;
+        @media(max-width:600px){
+            font-size: 30px;
+            width: 90%;
+        }
+    }
+}

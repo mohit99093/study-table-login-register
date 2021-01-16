@@ -15,9 +15,9 @@ import * as actions from '../../store/actions/actions'
 import "./SignIn.scss"
 function Copyright() {
   return (
-    <Typography variant="body2"  align="center">
+    <Typography variant = "body2"  align = "center">
       {'Copyright © '}
-      <Link className="white" href="http://localhost:3000/">
+      <Link className = "white" href = "http://localhost:3000/">
         Studytable
       </Link>{' '}
       {new Date().getFullYear()}
@@ -30,12 +30,12 @@ export default function SignInSide(props) {
  
    //response state
    const [status,setStatus] = useState({})
-   const [state, setstate] = useState({email:"", password:"", emailAdd:"",userotp:"",realotp:"", newPassword:""});
-    const handleChange = (e)=>{
+   const [state, setstate]  = useState({email:"", password:"", emailAdd:"",userotp:"",realotp:"", newPassword:""});
+   const handleChange       = (e)=>{
           setstate({...state, [e.target.name]:e.target.value})
     }
-   let msg  = status.message
-   const dispatch = useDispatch();
+   let   msg          = status.message
+   const dispatch     = useDispatch();
    const [tab,setTab] = useState(1);
 
    console.log(msg);
@@ -44,8 +44,8 @@ export default function SignInSide(props) {
    const  handle_login =  async(e)=>{
       e.preventDefault()
       await  fetch("/api/signin", {
-        method: "POST",
-        body: JSON.stringify(state),
+        method : "POST",
+        body   : JSON.stringify(state),
         headers: {
           "Content-Type": "application/json",
         },
@@ -73,8 +73,8 @@ export default function SignInSide(props) {
    const handle_sendotp = (e)=>{
      e.preventDefault()
      return fetch("/api/forgot", {
-      method: "POST",
-      body: JSON.stringify({email:state.emailAdd}),
+      method : "POST",
+      body   : JSON.stringify({email:state.emailAdd}),
       headers: {
         "Content-Type": "application/json",
       },
@@ -104,8 +104,8 @@ export default function SignInSide(props) {
    const handle_changePassword = (e)=>{
     e.preventDefault()
     return fetch("/api/changePassword", {
-     method: "POST",
-     body: JSON.stringify({email:state.emailAdd, newPassword:state.newPassword}),
+     method : "POST",
+     body   : JSON.stringify({email:state.emailAdd, newPassword:state.newPassword}),
      headers: {
        "Content-Type": "application/json",
      },
@@ -124,136 +124,136 @@ export default function SignInSide(props) {
    }
 
    const forgot = (
-    <form  className="form"  onSubmit={handle_sendotp}>           
+    <form className = "form"  onSubmit = {handle_sendotp}>
     <TextField
-      margin="normal"
+      margin = "normal"
       required
-      label="Email Address"
-      name="emailAdd"
+      label = "Email Address"
+      name  = "emailAdd"
       autoFocus
-      value={state.emailAdd}
-      inputProps={{ className:"bold" }}
-      onChange={handleChange}
+      value      = {state.emailAdd}
+      inputProps = {{ className:"bold" }}
+      onChange   = {handleChange}
     />   
     <div>
-    <Button variant="contained" color="primary" endIcon={<ChevronRightIcon/>}  type="submit" >
+    <Button variant = "contained" color = "primary" endIcon = {<ChevronRightIcon/>}  type = "submit" >
                    Send OTP
     </Button>
       </div>    
-      <div className="status">
-                  <p className={status.status===201?"green":"red"} > {msg} </p>
+      <div className = "status">
+      <p   className = {status.status===201?"green":"red"} > {msg} </p>
       </div>
     </form>
    )
 
    const enterOtp = (
-    <form  className="form"   onSubmit={handle_verifyotp}>           
+    <form className = "form"   onSubmit = {handle_verifyotp}>
     <TextField
-      margin="normal"
+      margin = "normal"
       required
-      label="Enter Otp"
-      name="userotp"
+      label = "Enter Otp"
+      name  = "userotp"
       autoFocus
-      value={state.userotp}
-      inputProps={{ className:"bold" }}
-      onChange={handleChange}
+      value      = {state.userotp}
+      inputProps = {{ className:"bold" }}
+      onChange   = {handleChange}
     />   
     <div>
-    <Button variant="contained" color="primary" endIcon={<ChevronRightIcon/>}  type="submit" >
+    <Button variant = "contained" color = "primary" endIcon = {<ChevronRightIcon/>}  type = "submit" >
             Verify OTP
     </Button>
-    <div className="status">
-                  <p className={status.status===201?"green":"red"} > {msg} </p>
+    <div className = "status">
+    <p   className = {status.status===201?"green":"red"} > {msg} </p>
       </div>
       </div>    
     </form>
    )
 
    const changePassword = (
-    <form  className="form"   onSubmit={handle_changePassword}>           
+    <form className = "form"   onSubmit = {handle_changePassword}>
     <TextField
-      margin="normal"
-      required
-      label="change password"
-      name="newPassword"
       autoFocus
-      type="password"
-      value={state.newPassword}
-      inputProps={{ className:"bold" }}
-      onChange={handleChange}
+      required
+      margin     = "normal"
+      label      = "change password"
+      name       = "newPassword"
+      type       = "password"
+      value      = {state.newPassword}
+      inputProps = {{ className:"bold" }}
+      onChange   = {handleChange}
     />   
     <div>
-    <Button variant="contained" color="primary" endIcon={<ChevronRightIcon/>}  type="submit" >
+    <Button variant = "contained" color = "primary" endIcon = {<ChevronRightIcon/>}  type = "submit" >
            Change Password
     </Button>
       </div> 
-      <div className="status">
-                  <p className={status.status===201?"green":"red"} > {msg} </p>
+      <div className = "status">
+      <p   className = {status.status===201?"green":"red"} > {msg} </p>
       </div>   
     </form>
    )
 
 
   return (
-    <Grid container component="main"  className="root-1 ">
+    <Grid container component = "main"  className = "root-1 ">
       <CssBaseline />
-      <Grid item xs={12}  md={8}  className="" >
-        <div className="heads">
-                <div className="reward">
+      <Grid item xs   = {12}  md = {8}  className = "" >
+      <div  className = "heads">
+      <div  className = "reward">
                    STUDY<span>table</span>
                 </div>
-                <div className="sub" >
+                <div className = "sub" >
                     Care a smile
                 </div>
             </div>
       </Grid>
-      <Grid item xs={12}  md={4}  elevation={6} square >
-        <div  className="paper">
+      <Grid item xs   = {12}  md = {4}  elevation = {6} square >
+      <div  className = "paper">
           {tab===1?
-          <form  className="form"   onSubmit={handle_login}>
+          <form className = "form"   onSubmit = {handle_login}>
            
           <TextField
-            margin="normal"
+            margin = "normal"
             required
-            label="Email Address"
-            name="email"
+            label = "Email Address"
+            name  = "email"
             autoFocus
-            inputProps={{ className:"bold" }}
-            onChange={handleChange}
+            inputProps = {{ className:"bold" }}
+            onChange   = {handleChange}
           />
           <TextField
-            variant="standard"
-            margin="normal"
+            variant = "standard"
+            margin  = "normal"
             required
-            name="password"
-            label="Password"
-            type="password"
-            onChange={handleChange}
+            name     = "password"
+            label    = "Password"
+            type     = "password"
+            onChange = {handleChange}
           />            
-          <Grid container className="forgot">
+          <Grid container className = "forgot">
             <Grid item xs>
-              <Link href="#" variant="body2" className="Link bold white" onClick={()=>setTab(2)} >
+              <Link href = "#" variant = "body2" className = "Link bold white" onClick = {()=>setTab(2)} >
                 Forgot password?
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2" className="Link bold white" component={li} to="/Register" >
+              <Link href = "#" variant = "body2" className = "Link bold white" component = {li} to = "/Register" >
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
           </Grid>
 
-            <div className="login-button-div">
-              <Button variant="contained" color="primary" endIcon={<ChevronRightIcon/>}  type="submit" >
+            <div    className = "login-button-div">
+            <Button variant   = "contained" color = "primary" endIcon = {<ChevronRightIcon/>}  type = "submit" >
                      Log In
               </Button>
            </div>
 
-           <div className="status">
-                  <p className={status.status===201?"green":"red"} > {msg} </p>
+           <div className = "status">
+           <p   className = {status.status===201?"green":"red"} > {msg} </p>
               </div>
-            <Box mt={5} style={{color:"white"}}>
-               <Copyright />
+            <Box mt = {5} style = {{color:"white"}}>
+              <Copyright />
             </Box>
 
            

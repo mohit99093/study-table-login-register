@@ -3,13 +3,13 @@ import "./Detail.scss";
 
 export default function Detail() {
   return (
-    <div style={{ backgroundColor: "#fafafa" }}>
-      <div className="nav1">
-        <a href="/">
+    <div style     = {{ backgroundColor: "#fafafa" }}>
+    <div className = "nav1">
+    <a   href      = "/">
           STUDY<span>table </span>{" "}
         </a>
       </div>
-      <div className="det">
+      <div className = "det">
         <div>
           <h4>About Us</h4>
           <p>

@@ -2,8 +2,8 @@ import * as actions from "../actions/actions";
 
 let initialState = {
     //auth
-    idToken: localStorage.getItem('idToken') || null,
-    userId: localStorage.getItem('userId') || null,
+    idToken : localStorage.getItem('idToken') || null,
+    userId  : localStorage.getItem('userId') || null,
     userName: localStorage.getItem('userName') || null,
 };
 
@@ -20,16 +20,16 @@ if (expireDate) {
         initialState = {
             ...initialState,
             idToken: null,
-            userId: null
+            userId : null
         }
     }
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case actions.LOG_IN: return authSuccess(state, action);
+        case actions.LOG_IN : return authSuccess(state, action);
         case actions.LOG_OUT: return logOut(state, action);
-        default:
+             default        : 
             return state;
     }
 };
@@ -37,9 +37,9 @@ const reducer = (state = initialState, action) => {
 function authSuccess(state, action) {
     return {
         ...state,
-        idToken: action.idToken,
-        userId: action.userId,
-        userName:action.userName
+        idToken : action.idToken,
+        userId  : action.userId,
+        userName: action.userName
     }
 }
 
@@ -47,8 +47,8 @@ function logOut(state, action) {
     return {
         ...state,
         idToken: null,
-        userId: null,
-        useName:null
+        userId : null,
+        useName: null
     }
 }
 

@@ -8,7 +8,7 @@ import ListItem from '@material-ui/core/ListItem';
 
 export default function Nav() {
     const [classes,setClasses] = useState('')
-    const listenScrollEvent = e => {
+    const listenScrollEvent    = e => {
         if (window.scrollY > (window.screen.height*0.8)) {
           setClasses("bgwhite")
         } else {
@@ -33,62 +33,62 @@ export default function Nav() {
 
       const list = (anchor) => (
         <div
-          className="drawer"
-          role="presentation"
-          onClick={toggleDrawer(anchor, false)}
-          onKeyDown={toggleDrawer(anchor, false)}
+          className = "drawer"
+          role      = "presentation"
+          onClick   = {toggleDrawer(anchor, false)}
+          onKeyDown = {toggleDrawer(anchor, false)}
         >
           <List>
-            <ListItem style={{padding:'20px',fontWeight:'bold',fontSize:'20px',display:'flex',justifyContent:'center'}} >
-               STUDY<span style={{fontSize:'30px'}} >table</span>
+            <ListItem  style = {{padding:'20px',fontWeight:'bold',fontSize:'20px',display:'flex',justifyContent:'center'}} >
+            STUDY<span style = {{fontSize:'30px'}} >table</span>
             </ListItem>
             <Divider/>
-            <ListItem style={{padding:'20px',fontWeight:'bold'}} >
-               <a style={{color:'black', textDecoration:'none' }}  href="/" >Home</a>
+            <ListItem style = {{padding:'20px',fontWeight:'bold'}} >
+            <a        style = {{color:'black', textDecoration:'none' }}  href = "/" >Home</a>
             </ListItem>
             <Divider/>
-            <ListItem style={{padding:'20px',fontWeight:'bold'}} >
-              <a  href="/student" style={{color:'black', textDecoration:'none' }} >Student</a>
+            <ListItem style = {{padding:'20px',fontWeight:'bold'}} >
+            <a        href  = "/student" style = {{color:'black', textDecoration:'none' }} >Student</a>
            </ListItem>
            <Divider/>
-            <ListItem style={{padding:'20px',fontWeight:'bold'}} >
-               <a href="/teacher" style={{color:'black', textDecoration:'none' }} >Teacher</a>
+            <ListItem style = {{padding:'20px',fontWeight:'bold'}} >
+            <a        href  = "/teacher" style = {{color:'black', textDecoration:'none' }} >Teacher</a>
             </ListItem>
             <Divider/>
-            <ListItem style={{padding:'20px',fontWeight:'bold'}} >
-               <a href="/coaching" style={{color:'black', textDecoration:'none' }} >Coaching</a>
+            <ListItem style = {{padding:'20px',fontWeight:'bold'}} >
+            <a        href  = "/coaching" style = {{color:'black', textDecoration:'none' }} >Coaching</a>
             </ListItem>
             <Divider/>
-            <ListItem style={{padding:'20px',fontWeight:'bold'}} >
-              <a href="/school" style={{color:'black', textDecoration:'none' }} >School</a>
+            <ListItem style = {{padding:'20px',fontWeight:'bold'}} >
+            <a        href  = "/school" style = {{color:'black', textDecoration:'none' }} >School</a>
            </ListItem>
            <Divider/>
-           <ListItem style={{padding:'20px',fontWeight:'bold'}} >
-             <a href="/contact" style={{color:'black', textDecoration:'none' }} >Contact Us</a>
+           <ListItem style = {{padding:'20px',fontWeight:'bold'}} >
+           <a        href  = "/contact" style = {{color:'black', textDecoration:'none' }} >Contact Us</a>
           </ListItem>
            <Divider/>
           </List>
         </div>
       );
     return (
-        <header className={classes+ " header_nav"} >
-            <nav className="nav" >
-                <div className="left" >
+        <header className = {classes+ " header_nav"} >
+        <nav    className = "nav" >
+        <div    className = "left" >
                    STUDY<span>table</span>
                 </div>
-                <div className="right" >
+                <div className = "right" >
                    <ul>
-                       <li><a href="/" >Home</a></li>
-                       <li><a href="/student"  style={{color:'#2baba7'}} >Student</a></li>
-                       <li><a href="/teacher" >Teacher</a></li>
-                       <li><a href="/school" >School</a></li>
-                       <li><a href="/coaching" >Coaching</a></li>
-                       <li><a href="/blog" >Blogs</a></li>
+                       <li><a href = "/" >Home</a></li>
+                       <li><a href = "/student"  style = {{color:'#2baba7'}} >Student</a></li>
+                       <li><a href = "/teacher" >Teacher</a></li>
+                       <li><a href = "/school" >School</a></li>
+                       <li><a href = "/coaching" >Coaching</a></li>
+                       <li><a href = "/blog" >Blogs</a></li>
                    </ul>
                 </div>
-                <React.Fragment key="right">
-               <div className="icon" onClick={toggleDrawer("right", true)} > <DehazeIcon/> </div> 
-              <Drawer anchor={"right"} open={state["right"]} onClose={toggleDrawer("right", false)}>
+                <React.Fragment key       = "right">
+                <div            className = "icon" onClick = {toggleDrawer("right", true)} > <DehazeIcon/> </div>
+                <Drawer         anchor    = {"right"} open = {state["right"]} onClose = {toggleDrawer("right", false)}>
                  {list("right")}
               </Drawer>
       </React.Fragment>

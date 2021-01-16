@@ -1,14 +1,14 @@
-const mongoose = require('mongoose')
+const mongoose  = require('mongoose')
 const validator = require('validator')
 
 const contactSchema  = new mongoose.Schema({
     name:{
-        type:String,
-        required:true
+        type    : String,
+        required: true
     },
     email:{
-        type:String,
-        required:true,
+        type    : String,
+        required: true,
         validate(val){
             if(!validator.isEmail(val)){
                 throw new Error("Invalid Email")
@@ -16,16 +16,16 @@ const contactSchema  = new mongoose.Schema({
         }
     },
     contact:{
-        type:String,
-        required:true,        
+        type    : String,
+        required: true,
     },
     city:{
-        type:String,
-        required:true
+        type    : String,
+        required: true
     },
     school:{
-        type:String,
-        required:true
+        type    : String,
+        required: true
     },
 },
 )

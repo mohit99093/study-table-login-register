@@ -1,9 +1,9 @@
-const Contact = require('../models/contact')
-const Email = require('../models/emails')
+const Contact  = require('../models/contact')
+const Email    = require('../models/emails')
 const Register = require('../models/register')
-const bcrypt = require("bcryptjs");
-const jwt = require('jsonwebtoken')
-const use = require('../utils/emails')
+const bcrypt   = require("bcryptjs");
+const jwt      = require('jsonwebtoken')
+const use      = require('../utils/emails')
 
 //contact
 exports.postContact = async (req,res)=>{
@@ -29,9 +29,9 @@ exports.postEmail = async (req,res)=>{
 exports.postRegister = async (req,res)=>{
    console.log(req.body);
   
-   const salt = await bcrypt.genSalt(10);
-   const hashedPassword = await bcrypt.hash(req.body.password,salt) 
-   const register = new Register({...req.body, password:hashedPassword})
+   const salt           = await bcrypt.genSalt(10);
+   const hashedPassword = await bcrypt.hash(req.body.password,salt)
+   const register       = new Register({...req.body, password:hashedPassword})
    console.log(register);
    try{
       await register.save()
@@ -62,9 +62,9 @@ exports.sendOTP=async(req,res)=>{
       const user = await Register.findOne({}).where({email:email})
       if(!user)
       return res.json({status:401,message:"Not registered! Please register first!"})
-      const otp = Math.floor((Math.random()*1000000)%10000000);
-   const subject = "OTP for password change";
-   const text = `Hi ${user.name}, your OTP for changing password is ${otp}`;
+      const otp     = Math.floor((Math.random()*1000000)%10000000);
+      const subject = "OTP for password change";
+      const text    = `Hi ${user.name}, your OTP for changing password is ${otp}`;
    use.sentMail(email,subject,text);
    return res.json({status:201,otp:otp,message:'OTP is send to your email address'})
    }
@@ -79,8 +79,8 @@ exports.changePassword = async(req,res)=>{
    if(!user)
    return  res.json({status:401,message:"User Not Found"})
 
-   const salt = await bcrypt.genSalt(10);
-   const hashedPassword = await bcrypt.hash(req.body.newPassword,salt) 
+   const salt           = await bcrypt.genSalt(10);
+   const hashedPassword = await bcrypt.hash(req.body.newPassword,salt)
   
    try{
       await  Register.updateOne({ email: req.body.email }, { $set: { password: hashedPassword } });

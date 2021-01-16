@@ -1,10 +1,10 @@
-const mongoose = require('mongoose')
+const mongoose  = require('mongoose')
 const validator = require('validator')
 
 const emailSchema  = new mongoose.Schema({
     email:{
-        type:String,
-        required:true,
+        type    : String,
+        required: true,
         validate(val){
             if(!validator.isEmail(val)){
                 throw new Error("Invalid Email")

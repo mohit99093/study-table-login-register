@@ -1,46 +1,46 @@
 .contacts{
     background: #feebd9;
-    width: 100%;
-    height: 100vh;
+    width     : 100%;
+    height    : 100vh;
     .logo{
-        position: absolute;
-        top: 1.25em;
-        left: 1em;
-        font-size: 20px;
+        position       : absolute;
+        top            : 1.25em;
+        left           : 1em;
+        font-size      : 20px;
         text-decoration: none;
-        color: black;
-        font-weight: bold;
+        color          : black;
+        font-weight    : bold;
         span{
             font-size: 30px;
         }
         @media(max-width:600px){
             font-size: 12px;
-            top: 1em;
+            top      : 1em;
             span{
                 font-size: 18px;
             }
         }
     }
     h1{
-        margin: 0 !important;
-        padding: 1em 0;
+        margin    : 0 !important;
+        padding   : 1em 0;
         text-align: center;
-        width: 100%;
-        color: black;
+        width     : 100%;
+        color     : black;
         @media(max-width:600px){
-            margin: 0 1em;
+            margin   : 0 1em;
             font-size: 15px;
         }
     }
     .form{
-        width: 100%;
+        width : 100%;
         margin: 2em 0;
         form{
-            width: 60%;
-            margin: 0 auto;
-            display: flex;
+            width         : 60%;
+            margin        : 0 auto;
+            display       : flex;
             flex-direction: column;
-            align-items: center;
+            align-items   : center;
             @media(max-width:600px){
                 width: 100%;
             }
@@ -50,11 +50,11 @@
                     width: 80%;
                 }
                 h6{
-                    margin: 1em 0 !important;
+                    margin   : 1em 0 !important;
                     font-size: 17px;
                     input{
                         border-radius: 8px;
-                        color: #2baba7 !important;
+                        color        : #2baba7 !important;
                         // border: 1px solid #2baba7;
                     }
                 }
@@ -71,50 +71,50 @@
 
 }
 .MuiInput-underline:before{
-    border-bottom:  2px solid black !important;
+    border-bottom: 2px solid black !important;
 }
 .MuiInput-underline:after{
     border-bottom: 2px solid #2baba7 !important;
 }
 .MuiInputLabel-root{
-    color: black !important;
+    color         : black !important;
     text-transform: capitalize !important;
 }
 .next{
-    width: 60%;
-    display: flex;
+    width          : 60%;
+    display        : flex;
     justify-content: flex-end;
     @media(max-width:600px){
         width: 80%;
     }
     .btn13{
         background-color: #2baba7 !important;
-        color: white !important;
-        font-size: 14px !important;
-        padding: 0.5em 1em !important;
-        border: 8px !important;
+        color           : white !important;
+        font-size       : 14px !important;
+        padding         : 0.5em 1em !important;
+        border          : 8px !important;
     }    
 
 }
 .subm{
-    width: 60%;
-    display: flex;
+    width          : 60%;
+    display        : flex;
     justify-content: center;
     @media(max-width:600px){
         width: 80%;
     }
     .btn13{
         background-color: #2baba7 !important;
-        color: white !important;
-        font-size: 14px !important;
-        padding: 0.5em 1em !important;
-        border: 8px !important;
+        color           : white !important;
+        font-size       : 14px !important;
+        padding         : 0.5em 1em !important;
+        border          : 8px !important;
     }    
 
 }
 .status{
-    margin: 3em 0;
-    text-align: center;
+    margin     : 3em 0;
+    text-align : center;
     font-weight: bold;
     .green{
         color: #2baba7;

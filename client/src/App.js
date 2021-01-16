@@ -15,17 +15,17 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/SignIn" component={SignIn} />
-        <Route path="/Register" component={Register} />
+        <Route path = "/" exact component   = {Home} />
+        <Route path = "/SignIn" component   = {SignIn} />
+        <Route path = "/Register" component = {Register} />
         
-        <Route path="/student" component={Student} />
-        <Route path="/teacher" component={Teacher} />
-        <Route path="/school" component={School} />
-        <Route path="/coaching" component={Coaching} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/blog" component={Blogs} />
-        <Route path="/blogs/detail" component={Detail} />
+        <Route path = "/student" component      = {Student} />
+        <Route path = "/teacher" component      = {Teacher} />
+        <Route path = "/school" component       = {School} />
+        <Route path = "/coaching" component     = {Coaching} />
+        <Route path = "/contact" component      = {Contact} />
+        <Route path = "/blog" component         = {Blogs} />
+        <Route path = "/blogs/detail" component = {Detail} />
       </Switch>
     </div>
   );

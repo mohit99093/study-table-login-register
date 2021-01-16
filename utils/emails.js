@@ -6,13 +6,13 @@ sgMail.setApiKey(API_KEY);
 
 exports.sentMail = async (email,subject,content)=>{
     const message = {
-        to : email,
-        from : {
-                name: "Study Table",
-                email:"mohitsolanki83974@gmail.com"
+        to  : email,
+        from: {
+                name : "Study Table",
+                email: "mohitsolanki83974@gmail.com"
         },
         subject: subject,
-        text : content    
+        text   : content
     
     }
     sgMail.send(message).then(res=>console.log('sent email!!')).catch(e=>console.log(e.message));

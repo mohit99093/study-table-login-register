@@ -174,9 +174,9 @@ export default function SignInSide(props) {
     <TextField
       autoFocus
       required
-      margin     = "normal"
-      label      = "change password"
-      name       = "newPassword"
+      margin = "normal"
+      label = "change password"
+      name  = "newPassword"
       type       = "password"
       value      = {state.newPassword}
       inputProps = {{ className:"bold" }}
@@ -253,7 +253,7 @@ export default function SignInSide(props) {
            <p   className = {status.status===201?"green":"red"} > {msg} </p>
               </div>
             <Box mt = {5} style = {{color:"white"}}>
-              <Copyright />
+               <Copyright />
             </Box>
 
            
